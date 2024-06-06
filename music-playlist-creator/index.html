@@ -3,25 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Music Playlist Explorer</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <!-- Your header content here -->
+    <header id = "explorer-header">
+        <!-- Explorer header & title -->
+        <h2>Music Playlist Explorer</h2>
     </header>
 
-    <main> 
-        <!-- Your main content here -->
+    <main>
+        <!-- Display of playlists -->
+        <section id = "playlist-cards">
+            <!-- JavaScript injects playlist cards here! -->
+        </section>
     </main>
 
-    <footer>
-        <!-- Your footer content here -->
+    <section id = "modal" class = "modal-overlay">
+        <div class = "modal-content">
+            <span class = "close">&times;</span>
+
+            <!-- Modal playlist information injected below. -->
+            <article class = "modal-playlist">
+                <img id = "playlist-img">
+                <section class = "info">
+                    <h2 id = "playlist-name"></h2>
+                    <p id = "creator-name"></p>
+                </section>
+            </article>
+
+            <!-- Songs from playlist injected below by JavaScript. -->
+            <section id = "songs">
+            </section>
+        </div>
+    </section>
+
+    <footer id = "explorer-footer">
+        <p>Footer</p>
     </footer>
     <script src="data/data.js"></script>
     <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/1d4b80d300.js" crossorigin="anonymous"></script>
 </body>
 </html>
