@@ -1,8 +1,6 @@
 let modal = document.getElementById("modal");
 let span = document.getElementsByClassName("close")[0];
 
-let playlistCards = []
-
 function createPlaylistCards() {
     // Creates the playlist cards.
 
@@ -56,9 +54,6 @@ function createPlaylistCards() {
         heart.addEventListener("click", () => likePlaylist(heart, likeCount))
         playlistInfo.addEventListener("click", () => openModal(data["playlists"][idx]));
 
-        // Adding card to array of playlist cards.
-        playlistCards.push(playlistCard);
-
         document.getElementById("playlist-cards").appendChild(playlistCard);
     }
 }
@@ -70,6 +65,8 @@ function openModal(playlist) {
     document.getElementById("playlist-name").innerText = playlist["playlist_name"];
     document.getElementById("playlist-img").src = playlist["playlist_art"];
     document.getElementById("creator-name").innerHTML = `<strong>Artist: </strong> ${playlist["playlist_creator"]}`;
+
+    document.getElementById("shuffle-button").addEventListener("click", () => shuffleSongs(playlist));
 
     createSongList(playlist);
 
@@ -148,14 +145,31 @@ function createSongList(playlist) {
     }
 }
 
+function shuffleSongs(playlist) {
+    let currentIdx = playlist["songs"].length - 1;
+
+    while (currentIdx >= 0) {
+        let randomIdx = Math.floor((Math.random() * (currentIdx + 1)))
+
+        let tmp = playlist["songs"][currentIdx];
+        playlist["songs"][currentIdx] = playlist["songs"][randomIdx];
+        playlist["songs"][randomIdx] = tmp;
+        currentIdx--;
+    }
+
+    createSongList(playlist);
+}
+
 span.onclick = function() {
     // Closes out the modal if the user clicks on the X.
+    songCards = []
     modal.style.display = "none";
 }
 
 window.onclick = function(event) {
     // Closes out the modal if the user clicks outside of it.
     if (event.target == modal && modal.style.display == "block") {
+        songCards = []
         modal.style.display = "none";
     }
 }
