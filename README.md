@@ -1,4 +1,4 @@
-## Unit 1 Assignment: Globetrotter
+## Unit 1 Assignment: Music Playlist Explorer
 
 Submitted by: **Destiny Okonkwo**
 
