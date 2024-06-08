@@ -2,29 +2,42 @@
 <html lang = "en">
 <head>
    <meta charset = "UTF-8">
-   <meta name = "viewport" content = "width = device-width, inital-scale = 1.0">
+   <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
 
     <title>Featured Playlists</title>
 
     <link rel = "stylesheet" href = "style.css">
     <link rel = "stylesheet" href = "home.css">
+    <link rel = "stylesheet" href = "global.css">
+
 </head>
 <body>
-    <header id = "explorer-header">
-        <h2>Featured Playlist</h2>
+    <header id = "explorer-header" style = "display: flex;">
+        <i class = "fa-solid fa-wand-sparkles fa-3x" style = "padding-top: 5%; padding-right: 30px;"></i>
+        <div>
+            <p style = "color: rgba(255, 255, 255, 0.4) !important; font-size: medium;"><strong><u>Home</u></strong</p>
+            <h1>Featured Playlist</h1>
+            <strong><p>Ready to jam?</p></strong>
+        </div>
     </header>
 
     <main>
-        <a href = "index.html"><button id = "all-playlists-button">All Playlists</button></a>
+        <section class = "buttons">
+            <a href = "index.html" style = "text-decoration: none !important;"><button class = "featured-button">ALL PLAYLISTS</button></a>
+        </section>
 
+        <section>
+            <section id = "featured">
 
+            </section>
+        </section>
     </main>
 
     <footer id = "explorer-footer">
         <p>Footer</p>
     </footer>
     <script src = "data/data.js"></script>
-    <script src = "script.js"></script>
+    <script src = "home.js"></script>
     <script src = "https://kit.fontawesome.com/1d4b80d300.js" crossorigin="anonymous"></script>
 </body>
 </html>

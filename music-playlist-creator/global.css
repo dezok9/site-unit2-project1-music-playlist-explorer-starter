@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+.plus-jakarta-sans-regular {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header,
+main,
+body {
+    font-family: "Plus Jakarta Sans";
+    color: white;
+}
+
+.buttons {
+    display: flex;
+    flex: center;
+    margin: auto;
+    padding-left: 23%;
+}
+
+#explorer-header {
+    background-color: #2B3137;
+    font-size: 24px;
+    padding: 4% 20% 0% 23%;
+    line-height: 80%;
+}
+
+.featured-button {
+    /* Unclicked */
+    transition-duration: 0.4s;
+
+    text-decoration: none !important;
+    background-color: rgba(255, 255, 255, 0);
+    border: 4px white solid;
+    font-weight: 500px;
+    border-radius: 60px;
+    margin: 20px 20px 20px 0px;
+    padding: 10px 40px;
+    display: inline;
+    color: white;
+    text-decoration: none !important;
+}
+
+.featured-button:hover {
+    cursor: pointer;
+    color: black;
+    font-weight: 700px;
+    background-color: white;
+    border: 4px rgba(255, 255, 255, 0), solid;
+}
+
+.playlist-title {
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.artist-name {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.info {
+    margin-left: 30px;
+}

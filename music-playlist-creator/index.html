@@ -7,16 +7,37 @@
     <title>Music Playlist Explorer</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href = "style.css">
+    <link rel="stylesheet" href ="global.css">
 </head>
 <body>
-    <header id = "explorer-header">
+    <header id = "explorer-header" style = "display: flex;">
         <!-- Explorer header & title -->
-        <h2>Music Playlist Explorer</h2>
+        <i class = "fa-solid fa-headphones fa-3x" style = "padding-top: 5%; padding-right: 30px;"></i>
+        <div>
+            <p style = "color: rgba(255, 255, 255, 0.4); font-size: medium;">Home > <strong><u>Playlists</u></strong</p>
+            <h1>Your Playlists</h1>
+            <p>Your hits, on repeat.</p>
+        </div>
     </header>
 
+    <main class = "buttons">
+        <button class = "featured-button" style = "background-color: white; color: black;">ALL</button></a>
+        <a href = "home.html" style = "text-decoration: none;">
+            <button class = "featured-button">FEATURED</button>
+        </a>
+            <button class = "featured-button">POP</button></a>
+            <button class = "featured-button">RAP</button></a>
+            <button class = "featured-button">RB&B</button></a>
+            <button class = "featured-button" id = "search-button" style = "background-color: rgba(255, 255, 255, 0.4); color: white; border: 4px rgba(255, 255, 255, 0.4) solid"><i class = "fa-solid fa-magnifying-glass"></i></button>
+
+    </main>
+
+    <section class = "buttons">
+        <input id = "searching" class = "featured-button" oninput = "searching()"></input>
+    </section>
+
     <main>
-        <a href = "home.html"><button id = "all-playlists-button">Featured Playlist</button></a>
         <!-- Display of playlists -->
         <section id = "playlist-cards">
             <!-- JavaScript injects playlist cards here! -->
@@ -36,13 +57,19 @@
                 </section>
             </article>
 
-            <button id = "shuffle-button">Shuffle</button>
+            <button id = "shuffle-button">
+                <i class = "fa-solid fa-shuffle"></i>
+                 SHUFFLE
+            </button>
 
             <!-- Songs from playlist injected below by JavaScript. -->
             <section id = "songs">
             </section>
         </div>
     </section>
+
+    <span id = "player">
+    </span>
 
     <footer id = "explorer-footer">
         <p>Footer</p>

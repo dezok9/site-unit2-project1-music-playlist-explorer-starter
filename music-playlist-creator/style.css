@@ -1,14 +1,36 @@
-#explorer-header {
-    padding: 10px;
-    background-color: lightgrey;
-}
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+.plus-jakarta-sans-regular {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    box-shadow: inset;
+  }
 
 #explorer-footer {
-    padding: 5px;
+    padding: 10px;
     background-color: lightgrey;
+    font-size: 24px;
+
+}
+
+#songs {
+    border-color: #2B3137;
+    border-style: solid;
+    border-width: 2px 0px;
+}
+
+.search-button {
+    border: 4px solid (255, 255, 255, 1.0) ;
+}
+
+.search-button:hover {
+    border: 4px white solid !important;
 }
 
 #playlist-cards {
+    margin: 0% 20%;
     display: flex;
     flex-wrap: wrap;
 }
@@ -18,21 +40,40 @@
     border-radius: 10px;
 }
 
+.playlist-card {
+    transition-duration: 0.4s;
+    border: 2px solid grey;
+    background-color: rgb(255, 255, 255, 0.4);
+    margin: 40px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+    box-shadow: 0px 0px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+#add-card {
+    transition-duration: 0.4s;
+    align-content: center;
+    text-align: center;
+}
+
+.song {
+    display: flex;
+    border-color: #2B3137;
+    border-style: solid;
+    border-width: 2px 0px;
+    padding: 20px 40px;
+}
+
 .song-img {
     width: 130px;
     border-radius: 10px;
 }
 
-.playlist-card {
-    border: 2px solid grey;
-    margin: 40px;
-    border-radius: 10px;
-    padding: 10px;
-    width: 200px;
-}
-
 .playlist-card:hover {
-    background-color: beige;
+    background-color: rgb(255, 255, 255, 0.55);
+    cursor: pointer;
 }
 
 .modal-overlay {
@@ -48,24 +89,16 @@
 }
 
 .modal-content {
-    background-color: #FEFEFE;
+    background-color: #1a1e22;
     margin: 15% auto;
     padding: 40px 50px;
-    border: 1px solid #888;
+    border: 3px solid #282828;
     width: 80%;
     border-radius: 10px;
 }
 
 .modal-playlist {
     display: flex;
-}
-
-.song {
-    margin: 20px 0px 20px 0px;
-    display: flex;
-    border: 2px grey solid;
-    padding: 20px 40px;
-    border-radius: 10px;
 }
 
 .like-count-info {
@@ -79,19 +112,30 @@
     transition-duration: 0.4s;
 }
 
+.liked-heart {
+    color: red;
+}
+
 #shuffle-button {
     /* Transition between states */
     transition-duration: 0.4s;
 
-    border-radius: 60px grey solid;
-    background-color: grey;
+    border: 4px rgba(255, 255, 255, 0), solid;
+    font-weight: 500px;
+    border-radius: 60px;
+    background-color: white;
     margin: 20px 20px 20px 0px;
     padding: 10px 40px;
-    color: white
+    display: inline;
+    color: black
 }
 
 #shuffle-button:hover {
-    background-color: lightblue;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    font-weight: 700px;
+    border: 4px white solid;
+    cursor: pointer;
 }
 
 .timestamp {
@@ -102,8 +146,9 @@
     margin-bottom: auto;
 }
 
-.info {
-    margin-left: 30px;
+.play-button {
+    margin: auto 0px auto 50px;
+    color: white;
 }
 
 .close {
@@ -119,9 +164,19 @@
     text-decoration: none;
 }
 
+#searching {
+    display: none;
+    width: 56% !important;
+    background-color: white !important;
+    color: rgba(43, 49, 55, 0.6) !important;
+    text-align: left !important;
+    font-family: "Plus Jakarta Sans";
+    font-weight: bold !important;
+    cursor: text;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    background-color: #2B3137;
 }
