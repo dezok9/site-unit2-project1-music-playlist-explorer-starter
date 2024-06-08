@@ -2,7 +2,7 @@
 
 Submitted by: **Destiny Okonkwo**
 
-Estimated time spent: **25** hours spent in total
+Estimated time spent: **30** hours spent in total
 
 ### Application Features
 
@@ -56,6 +56,19 @@ View on YouTube (please watch both for all features):
 https://youtu.be/lLjCrs7rKD0
 https://youtu.be/SpbnVjV5alE
 
+### Reflection
+
+* Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
+
+Partially. I felt a bit unprepared for the JavaScript, however, I learned gradually. 
+
+* If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
+  
+Yes, I would hve added additional features. I would have fully implemented the search feature, added more dynamic features to mimic/actually play the songs, and enable the adding of playlists. 
+
+* Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
+
+The project demo went well. One thing that I notice that my peer did that I would like to try next time is to create a landing page for the website and make it seem more like a real website.
 
 ### Shout out
 
