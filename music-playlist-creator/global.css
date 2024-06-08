@@ -12,6 +12,14 @@ main,
 body {
     font-family: "Plus Jakarta Sans";
     color: white;
+    background-color: #2B3137;
+}
+
+#explorer-footer {
+    background-color: #2B3137;
+    padding: 4% 23%;
+    font-size: small;
+    color: rgba(255, 255, 255, 0.3);
 }
 
 .buttons {

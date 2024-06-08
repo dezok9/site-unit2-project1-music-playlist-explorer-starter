@@ -2,6 +2,7 @@ let modal = document.getElementById("modal");
 let span = document.getElementsByClassName("close")[0];
 let searchButton = document.getElementById("search-button");
 let searchBar = document.getElementById("searching");
+let searchingPlaylists = document.getElementById("searching");
 
 function createPlaylistCards() {
     // Creates the playlist cards.
@@ -21,6 +22,8 @@ function createPlaylistCards() {
     let createPrompt = document.createElement("p");
     createPrompt.classList.add("prompt");
 
+    document.getElementById("playlist-cards").innerHTML = "";
+
     addCard.addEventListener("hover", () => addCard);
 
     // Assembly of add card using elements.
@@ -30,65 +33,60 @@ function createPlaylistCards() {
     document.getElementById("playlist-cards").appendChild(addCard);
 
     for (let idx = 0; idx < data["playlists"].length;  idx += 1) {
+        // Playlist card element creation.
+        let playlistCard = document.createElement("section");
+        playlistCard.classList.add("playlist-card");
 
-        console.log(document.getElementById("search-button").value);
-        // If the search bar is not hidden and there is text in the search bar.
-        if ((searchBar.style.display != "none" && (data["playlists"][idx]["playlist_name"].contains(document.getElementById("search-button").value || data["playlists"][idx]["playlist_creator"].contains(document.getElementById("search-button").value)))) || searchBar.style.display == "none") {
-            // Playlist card element creation.
-            let playlistCard = document.createElement("section");
-            playlistCard.classList.add("playlist-card");
+        let playlistInfo = document.createElement("section");
 
-            let playlistInfo = document.createElement("section");
+        // Playlist image element creation.
+        let playlistImg = document.createElement("img");
+        playlistImg.src = data["playlists"][idx]["playlist_art"];
+        playlistImg.classList.add("playlist-img");
 
-            // Playlist image element creation.
-            let playlistImg = document.createElement("img");
-            playlistImg.src = data["playlists"][idx]["playlist_art"];
-            playlistImg.classList.add("playlist-img");
+        // Playlist title element creation.
+        let playlistTitle = document.createElement("h2");
+        playlistTitle.textContent = data["playlists"][idx]["playlist_name"];
+        playlistTitle.classList.add("playlist-title");
 
-            // Playlist title element creation.
-            let playlistTitle = document.createElement("h2");
-            playlistTitle.textContent = data["playlists"][idx]["playlist_name"];
-            playlistTitle.classList.add("playlist-title");
+        // Playlist creator element creation.
+        let playlistCreator = document.createElement("p");
+        playlistCreator.textContent = data["playlists"][idx]["playlist_creator"];
 
-            // Playlist creator element creation.
-            let playlistCreator = document.createElement("p");
-            playlistCreator.textContent = data["playlists"][idx]["playlist_creator"];
+        // Playlist likes element creation.
+        let playlistCount = document.createElement("div");
+        playlistCount.classList.add("like-count-info");
 
-            // Playlist likes element creation.
-            let playlistCount = document.createElement("div");
-            playlistCount.classList.add("like-count-info");
+        let likeCount = document.createElement("p");
+        likeCount.textContent = data["playlists"][idx]["likeCount"];
 
-            let likeCount = document.createElement("p");
-            likeCount.textContent = data["playlists"][idx]["likeCount"];
+        let heart = document.createElement("i");
+        heart.classList.add("fa-regular");
+        heart.classList.add("fa-heart");
 
-            let heart = document.createElement("i");
-            heart.classList.add("fa-regular");
-            heart.classList.add("fa-heart");
+        let trash = document.createElement("i");
+        trash.classList.add("fa-solid");
+        trash.classList.add("fa-trash");
 
-            let trash = document.createElement("i");
-            trash.classList.add("fa-solid");
-            trash.classList.add("fa-trash");
+        // Assembly of card using elements.
+        playlistCard.appendChild(playlistInfo);
 
-            // Assembly of card using elements.
-            playlistCard.appendChild(playlistInfo);
+        playlistInfo.appendChild(playlistImg);
+        playlistInfo.appendChild(playlistTitle);
+        playlistInfo.appendChild(playlistCreator);
 
-            playlistInfo.appendChild(playlistImg);
-            playlistInfo.appendChild(playlistTitle);
-            playlistInfo.appendChild(playlistCreator);
+        playlistCard.appendChild(playlistCount);
 
-            playlistCard.appendChild(playlistCount);
+        playlistCount.appendChild(heart);
+        playlistCount.appendChild(likeCount);
+        playlistCount.appendChild(trash);
 
-            playlistCount.appendChild(heart);
-            playlistCount.appendChild(likeCount);
-            playlistCount.appendChild(trash);
+        // Adding event listner to each playlist card.
+        heart.addEventListener("click", () => likePlaylist(heart, likeCount));
+        trash.addEventListener("click", () => deletePlaylist(playlistCard))
+        playlistInfo.addEventListener("click", () => openModal(data["playlists"][idx]));
 
-            // Adding event listner to each playlist card.
-            heart.addEventListener("click", () => likePlaylist(heart, likeCount));
-            trash.addEventListener("click", () => deletePlaylist(playlistCard))
-            playlistInfo.addEventListener("click", () => openModal(data["playlists"][idx]));
-
-            document.getElementById("playlist-cards").appendChild(playlistCard);
-        }
+        document.getElementById("playlist-cards").appendChild(playlistCard);
     }
 }
 
@@ -218,7 +216,7 @@ searchButton.onclick = function() {
     }
 }
 
-function searching () {
+function searching() {
     // Re-rendering search bar on input of new text.
     createPlaylistCards();
 }

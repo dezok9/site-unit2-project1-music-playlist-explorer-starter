@@ -50,7 +50,7 @@ function featuredPlaylist() {
         songInfo.classList.add("info");
 
         // Song name element creation.
-        let songName = document.createElement("h4");
+        let songName = document.createElement("h2");
         songName.innerText = song["title"];
         songName.classList.add("song-name");
 
