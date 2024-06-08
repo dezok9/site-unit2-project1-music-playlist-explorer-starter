@@ -8,7 +8,7 @@ Estimated time spent: **25** hours spent in total
 
 #### CORE FEATURES
 
-- [X] **Home Page**
+- [ ] **Home Page**
   - [ ] A heading that captures the essence of the destination.
   - [ ] An introductory paragraph that welcomes visitors and sets the context for the site.
   - [ ] An evocative image that represents the location.
