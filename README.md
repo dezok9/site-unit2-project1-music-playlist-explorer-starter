@@ -66,6 +66,6 @@ https://www.loom.com/share/d5a707f838bb461ca9b553bdb61b2b9d?sid=d9d9de39-58d1-47
 Shout out to Tosin, Dara, and Faustina for their help with the project!
 
 <img width="1728" alt="Screenshot 2024-06-07 at 7 11 48 PM" src="https://github.com/dezok9/site-unit2-project1-music-playlist-explorer-starter/assets/111532003/68e13118-45e7-4000-b2c4-d0cce7668ec3">
-<img width="1727" alt="Screenshot 2024-06-07 at 7 12 04 PM" src="https://github.com/dezok9/site-unit2-project1-music-playlist-explorer-starter/assets/111532003/560cd2f5-e56c-44ba-b55f-754dcb47d77b">
 <img width="1728" alt="Screenshot 2024-06-07 at 7 12 19 PM" src="https://github.com/dezok9/site-unit2-project1-music-playlist-explorer-starter/assets/111532003/7b278138-68f3-448a-b789-f3ff6c4d8011">
+<img width="1727" alt="Screenshot 2024-06-07 at 7 12 04 PM" src="https://github.com/dezok9/site-unit2-project1-music-playlist-explorer-starter/assets/111532003/560cd2f5-e56c-44ba-b55f-754dcb47d77b">
 <img width="1727" alt="Screenshot 2024-06-07 at 7 12 45 PM" src="https://github.com/dezok9/site-unit2-project1-music-playlist-explorer-starter/assets/111532003/50455228-34f5-4327-913d-0619d139fe3f">
