@@ -108,7 +108,7 @@ function openModal(playlist) {
     modal.style.display = "block";
 }
 
-function likePlaylit(heart, likeCount) {
+function likePlaylist(heart, likeCount) {
     // Changing the heart to solid
     if (String(heart.classList).includes("fa-regular")) {
         // Change to solid if liked.
