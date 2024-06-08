@@ -59,7 +59,7 @@ Estimated time spent: **25** hours spent in total
 
 ### Walkthrough Video
 
-(https://www.loom.com/share/d5a707f838bb461ca9b553bdb61b2b9d?sid=d9d9de39-58d1-47cb-88d8-3c3621ba5fc8)
+https://www.loom.com/share/d5a707f838bb461ca9b553bdb61b2b9d?sid=d9d9de39-58d1-47cb-88d8-3c3621ba5fc8
 
 ### Shout out
 
